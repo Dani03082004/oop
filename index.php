@@ -1,9 +1,6 @@
 <?php
     ini_set('display_errors','On');
-    require 'src/School/User.php';
-    use App\School\User;
-    $user=new User();
-    echo $user->setEmail("dani@dani.com")->getEmail();
-    echo '<br>';
-    // echo "El user es: {$user->getEmail()}<br>";
-    var_dump($user);
+    require __DIR__.'/vendor/autoload.php';
+    use App\School\Student;
+    $student=new Student("test@test.com","test","M8");
+    dd($student);

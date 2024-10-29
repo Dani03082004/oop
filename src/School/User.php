@@ -1,10 +1,15 @@
 <?php
 
 namespace App\School;
-class User{
-    private string $email="test@test.com";
-    private string $name;
-    private string $password;
+abstract class User{
+    protected string $email="test@test.com";
+    protected string $name;
+    protected string $password;
+
+    function __construct($email,$name){
+        $this->email=$email;
+        $this->name=$name;
+    }
     function setEmail(string $email){
         $this->email=$email;
         return $this;
